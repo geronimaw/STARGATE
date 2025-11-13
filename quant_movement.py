@@ -83,7 +83,7 @@ def main(joint_history, joint_name, fps=30):
     plt.legend()
     plt.grid(True)
     # plt.show()
-    plt.savefig(f'occhiali_joint_movement_{names[joint_name]}.png')
+    plt.savefig(f'FG4_joint_movement_{names[joint_name]}.png')
     plt.close()
 
     # # Plot joint speed over time
@@ -97,7 +97,7 @@ def main(joint_history, joint_name, fps=30):
     plt.title(f'Velocità articolare nel tempo per {names[joint_name]}')
     plt.grid(True)
     # plt.show()
-    plt.savefig(f'occhiali_joint_speed_{names[joint_name]}.png')
+    plt.savefig(f'FG4_joint_speed_{names[joint_name]}.png')
     plt.close()
 
     # Plot trajectory in spatial plane coloured by time
@@ -109,7 +109,7 @@ def main(joint_history, joint_name, fps=30):
     plt.title(f'Traiettoria articolare nello spazio per {names[joint_name]}')
     plt.grid(True)
     # plt.show()
-    plt.savefig(f'occhiali_joint_trajectory_{names[joint_name]}.png')
+    plt.savefig(f'FG4_joint_trajectory_{names[joint_name]}.png')
     plt.close()
 
     # Plot heatmap of joint speed over time (sliding window)
@@ -127,7 +127,7 @@ def main(joint_history, joint_name, fps=30):
     plt.xlabel('Tempo (s)')
     plt.title(f'Velocità media della {names[joint_name]}')
     plt.colorbar(label='Velocità (pixel/s)')
-    plt.savefig(f'occhiali_joint_speed_heatmap_{names[joint_name]}.png')
+    plt.savefig(f'FG4_joint_speed_heatmap_{names[joint_name]}.png')
     plt.close()
 
 if __name__ == "__main__":
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     import ast
 
     joint_history = []
-    with open('occhiali_keypoints.csv', mode='r') as file:
+    with open('FG4_keypoints.csv', mode='r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             frame = int(row['frame'])

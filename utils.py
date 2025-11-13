@@ -35,7 +35,7 @@ names = {
 }
 
 # Stereotypy labels (example)
-labels_occhiali = [{'stereotypy': 8, 'text': 'agita mani in aria', 'start': 0.00, 'end': 4.00},
+labels_FG4 = [{'stereotypy': 8, 'text': 'agita mani in aria', 'start': 0.00, 'end': 4.00},
                    {'stereotypy': 8, 'text': 'agita mani in aria', 'start': 5.50, 'end': 9.50},
                    {'stereotypy': 8, 'text': 'agita mani in aria', 'start': 13.70, 'end': 14.20},
                    {'stereotypy': 8, 'text': 'agita mani in aria', 'start': 17.00, 'end': 26.00},

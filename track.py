@@ -3,7 +3,7 @@ import mediapipe as mp
 import csv
 from tqdm import tqdm
 
-from utils import labels_occhiali
+from utils import labels_FG4
 
 # Pre‐compute frames for each episode
 def sec_to_frame(sec, fps):
@@ -38,7 +38,7 @@ def main(input_path, output_path, do_blur, do_landmark, do_stereotypy):
     h   = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     out = cv2.VideoWriter(output_path, fourcc, fps, (w, h))
 
-    label_intervals = [(sec_to_frame(l['start'], fps), sec_to_frame(l['end'], fps), l['stereotypy'], l['text']) for l in labels_occhiali]
+    label_intervals = [(sec_to_frame(l['start'], fps), sec_to_frame(l['end'], fps), l['stereotypy'], l['text']) for l in labels_FG4]
     frame_idx = 0
     joint_history = []  # list of dicts: {frame_idx: {landmark_name: (x,y)}}
 
@@ -158,7 +158,7 @@ def main(input_path, output_path, do_blur, do_landmark, do_stereotypy):
 
     # Save landmark history to a csv file
     if do_landmark:
-        with open('occhiali_keypoints.csv', mode='w', newline='') as file:
+        with open('FG4_keypoints.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             header = ['frame'] + [f'lm_{i}_x' for i in range(33)] + [f'lm_{i}_y' for i in range(33)]
             writer.writerow(header)
@@ -186,6 +186,6 @@ if __name__ == "__main__":
     stereotypy = False
 
     # Video input & output
-    input_path  = 'occhiali_.mp4'
-    output_path = f"occhiali_{'blur' if blur else ''}{'_lm' if landmark else ''}{'_stereo' if stereotypy else ''}.mp4"
+    input_path  = 'FG4_.mp4'
+    output_path = f"FG4_{'blur' if blur else ''}{'_lm' if landmark else ''}{'_stereo' if stereotypy else ''}.mp4"
     main(input_path, output_path, blur, landmark, stereotypy)
