@@ -11,4 +11,4 @@ Per eseguire gli script, è necessario avere installato Python 3 e le librerie s
 ```pip install -r requirements.txt```
 
 ## Esempio
-Il file `stereotipie_rilev.7z` contiene un esempio del risultato che otterremo dall'analisi di un video del dataset raccolto con il Faro. Il file è crittografato in formato 7z e può essere estratto utilizzando software come 7-Zip con la password fornita separatamente.
+Il file `stereotipie_rilev.7z` contiene un esempio del risultato che vorremmo otterremo dall'analisi di un video del dataset raccolto con il Faro. Il file è crittografato in formato 7z e può essere estratto utilizzando software come 7-Zip con la password fornita separatamente.
