@@ -8,8 +8,7 @@ Il repository contiene i seguenti file principali:
 
 ## Requisiti
 Per eseguire gli script, è necessario avere installato Python 3 e le librerie specificate in `requirements.txt`. Per installare le dipendenze, eseguire:
-```pip install -r requirements.txt
-```
+```pip install -r requirements.txt```
 
 ## Esempio
 Il file `stereotipie_rilev.7z` contiene un esempio del risultato che otterremo dall'analisi di un video del dataset raccolto con il Faro. Il file è crittografato in formato 7z e può essere estratto utilizzando software come 7-Zip con la password fornita separatamente.
